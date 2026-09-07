@@ -1,6 +1,6 @@
 # UKM Warisan Linux Administration Training
 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](file:///home/hisham/git/ukm-warisan-linux-administration/LICENSE)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](LICENSE)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com/)
 [![Rocky Linux](https://img.shields.io/badge/Rocky_Linux-9-10B981?logo=rockylinux&logoColor=white)](https://rockylinux.org/)
 [![Multipass](https://img.shields.io/badge/Lab_Env-Canonical_Multipass-black)](https://multipass.run/)
@@ -8,7 +8,7 @@
 
 Welcome to the official repository for the **UKM Warisan Practical Linux System Administration Training**. This repository hosts the comprehensive course syllabus, lab setup instructions, practical hands-on exercises, and administrative cheat sheets for the 2-day intensive workshop.
 
-The complete hands-on lab guide and walk-throughs can be found in [LINUX_TRAINEE_WORKBOOK.md](file:///home/hisham/git/ukm-warisan-linux-administration/LINUX_TRAINEE_WORKBOOK.md).
+The complete hands-on lab guide and walk-throughs can be found in [LINUX_TRAINEE_WORKBOOK.md](LINUX_TRAINEE_WORKBOOK.md).
 
 ---
 
@@ -159,12 +159,16 @@ systemctl is-system-running
 
 ## 📂 Repository Contents
 
-- [LINUX_TRAINEE_WORKBOOK.md](file:///home/hisham/git/ukm-warisan-linux-administration/LINUX_TRAINEE_WORKBOOK.md) — Comprehensive step-by-step participant manual, diagrams, and commands.
-- [README.md](file:///home/hisham/git/ukm-warisan-linux-administration/README.md) — Course syllabus, quick setup guide, and cheatsheets.
-- [LICENSE](file:///home/hisham/git/ukm-warisan-linux-administration/LICENSE) — Creative Commons Zero v1.0 Universal (CC0 1.0) Public Domain Dedication.
+- [SLIDES.md](SLIDES.md) — Marp-compatible presentation slide deck for general usage and attendees (54 slides).
+- [TRAINER_SLIDES.md](TRAINER_SLIDES.md) — Marp-compatible theoretical presentation slide deck for instructors (54 slides with talking notes).
+- [slides.html](slides.html) — Interactive standalone presentation web app with presenter notes, timer, overview grid, and dark/light mode.
+- [LINUX_TRAINEE_WORKBOOK.md](LINUX_TRAINEE_WORKBOOK.md) — Comprehensive step-by-step participant manual, diagrams, and commands.
+- [timetable.md](timetable.md) — 2-day workshop schedule and hourly syllabus outline.
+- [README.md](README.md) — Course syllabus, quick setup guide, and cheatsheets.
+- [LICENSE](LICENSE) — Creative Commons Zero v1.0 Universal (CC0 1.0) Public Domain Dedication.
 
 ---
 
 ## 📄 License
 
-This repository and training material are dedicated to the public domain under the [Creative Commons Zero v1.0 Universal](file:///home/hisham/git/ukm-warisan-linux-administration/LICENSE) (CC0 1.0) license.
+This repository and training material are dedicated to the public domain under the [Creative Commons Zero v1.0 Universal](LICENSE) (CC0 1.0) license.
