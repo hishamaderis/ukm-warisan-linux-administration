@@ -163,6 +163,7 @@ systemctl is-system-running
 - [TRAINER_SLIDES.md](TRAINER_SLIDES.md) — Marp-compatible theoretical presentation slide deck for instructors (54 slides with talking notes).
 - [slides.html](slides.html) — Interactive standalone presentation web app with presenter notes, timer, overview grid, and dark/light mode.
 - [LINUX_TRAINEE_WORKBOOK.md](LINUX_TRAINEE_WORKBOOK.md) — Comprehensive step-by-step participant manual, diagrams, and commands.
+- [LAB_EXERCISES.md](LAB_EXERCISES.md) — Practical hands-on lab exercise challenges, verification scripts, and capstone incident simulation.
 - [timetable.md](timetable.md) — 2-day workshop schedule and hourly syllabus outline.
 - [README.md](README.md) — Course syllabus, quick setup guide, and cheatsheets.
 - [LICENSE](LICENSE) — Creative Commons Zero v1.0 Universal (CC0 1.0) Public Domain Dedication.
