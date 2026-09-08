@@ -113,7 +113,7 @@ style: |
 ### Enterprise Systems, Virtualization & High-Performance Computing
 
 **2-Day Training**  
-Dual-Distribution Mastery: **Ubuntu 24.04 LTS** & **Rocky Linux 9**  
+Dual-Distribution: **Ubuntu 24.04 LTS** & **Rocky Linux 9**  
 Datacenter Compute: **NVIDIA GPU Administration & Multi-Instance GPU (MIG)**
 
 *Daily Schedule: 10:00 – 16:00 | Lunch Break: 13:00 – 14:00*
