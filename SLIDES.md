@@ -112,7 +112,7 @@ style: |
 # Practical Linux Administration & NVIDIA GPU Management
 ### Enterprise Systems, Virtualization & High-Performance Computing
 
-**2-Day Intensive Training Program**  
+**2-Day Training**  
 Dual-Distribution Mastery: **Ubuntu 24.04 LTS** & **Rocky Linux 9**  
 Datacenter Compute: **NVIDIA GPU Administration & Multi-Instance GPU (MIG)**
 
@@ -132,12 +132,12 @@ Use alongside LINUX_TRAINEE_WORKBOOK.md for hands-on lab exercises.
 | :--- | :--- | :--- | :--- |
 | **Day 1** | 10:00 – 11:30 | **Module 1** | **Terminal Basics**: UNIX philosophy, shell prompt, streams, paths, nano. |
 | | 11:30 – 13:00 | **Module 2** | **File Structure & Security**: FHS tree, user/group models, sudo, octal permissions. |
-| | **13:00 – 14:00** | **LUNCH** | *Mid-day Break & Networking* |
+| | **13:00 – 14:00** | **LUNCH** | *Mid-day Break* |
 | | 14:00 – 15:00 | **Module 3** | **Package Management**: APT (`.deb`) vs DNF (`.rpm`), repo architecture, updates. |
 | | 15:00 – 16:00 | **Module 4** | **Storage & Filesystems**: Block devices, `df`/`du`, loopback disks, ext4 vs XFS. |
 | **Day 2** | 10:00 – 11:30 | **Module 5** | **Processes & Systemd**: Process model, signals, PID 1, systemd unit lifecycle. |
 | | 11:30 – 13:00 | **Module 6** | **Networking & SSH**: TCP/IP sockets, ports, asymmetric cryptography, Ed25519. |
-| | **13:00 – 14:00** | **LUNCH** | *Mid-day Break & Networking* |
+| | **13:00 – 14:00** | **LUNCH** | *Mid-day Break* |
 | | 14:00 – 15:00 | **Module 7** | **Security & Logs**: Centralized logging, `systemd-journald`, `tail -f`, filtering. |
 | | 15:00 – 16:00 | **Module 8** | **NVIDIA GPU & MIG**: GPU architecture, `nvidia-smi` metrics, hardware MIG slicing. |
 
@@ -592,7 +592,7 @@ chown alex:developers project/
 # 🥪 LUNCH BREAK (13:00 – 14:00)
 ### Morning Wrap-up & Afternoon Preview
 
-*Mid-day Break & Networking*
+*Mid-day Break*
 
 **Afternoon Sessions:**
 - **Module 3 (14:00 – 15:00):** Package Management (`apt` vs `dnf`, Repositories, Updates)
@@ -1678,7 +1678,7 @@ sudo nvidia-smi -i 0 -mig 0
 
 # 🎓 Course Wrap-up & Enterprise Next Steps
 
-<div class="grid-2">
+<div class="grid-1">
 <div class="card">
 
 ### 🏆 Core Competencies Mastered
@@ -1693,25 +1693,7 @@ sudo nvidia-smi -i 0 -mig 0
   - Logging observability with `systemd-journald` and `grep`.
   - Datacenter NVIDIA GPU monitoring and MIG hardware partitioning.
 
-</div>
-<div class="card">
 
-### 🚀 Recommended Learning Path
-1. **Automation & Infrastructure-as-Code:**
-   - Ansible configuration management.
-   - Terraform for automated cloud provisioning.
-2. **Containerization & Cloud-Native:**
-   - Docker & Podman (rootless containers).
-   - Kubernetes cluster administration.
-3. **High-Performance AI Infrastructure:**
-   - NVIDIA GPU Operator for Kubernetes.
-   - Dynamic MIG allocation with Slurm workload manager.
-4. **Certifications:**
-   - Red Hat Certified System Administrator (RHCSA).
-   - Linux Foundation Certified SysAdmin (LFCS).
-
-</div>
-</div>
 
 ---
 
@@ -1726,6 +1708,6 @@ sudo nvidia-smi -i 0 -mig 0
 
 **Participant Lab Guide:** `LINUX_TRAINEE_WORKBOOK.md`  
 **Course Syllabus & Timetable:** `timetable.md` / `README.md`  
-**Slide Deck:** `SLIDES.md` | **Interactive App:** `slides.html`
+**Slide Deck:** `SLIDES.md`
 
 *Repository materials dedicated under CC0 1.0 Universal Public Domain.*
