@@ -8,7 +8,7 @@
 
 Before Day 1 starts, ensure you have both Linux distributions installed and running on your machine using Canonical Multipass.
 
-### Option A: Install Multipass on Windows 10/11
+### Option A1: Install Multipass on Windows 10/11 Pro/Enterprise/Server using hyperv
 1. Right-click the **Start Menu** and choose **PowerShell (Admin)** or **Terminal (Admin)**.
 2. Run:
    ```powershell
@@ -16,6 +16,22 @@ Before Day 1 starts, ensure you have both Linux distributions installed and runn
    ```
    *(Or download the installer from [multipass.run](https://multipass.run/))*
 3. Restart your computer if prompted by Windows.
+
+### Option A2: Install Multipass on Windows 10/11 using virtualbox
+1. Download virtualbox from (here)[https://download.virtualbox.org/virtualbox/7.2.16/VirtualBox-7.2.16-174877-Win.exe]. 
+2. Double click on the exe file to install VirtualBox, and follow the installation wizard until the end.
+3. Right-click the **Start Menu** and choose **PowerShell (Admin)** or **Terminal (Admin)**.
+4. Run:
+   ```powershell
+   winget install Canonical.Multipass
+   ```
+   *(Or download the installer from [multipass.run](https://multipass.run/))*
+5. Change the hypervisor used by multipass. Run below in **PowerShell (Admin)** or **Terminal (Admin)**:
+	 ```powershell
+	 multipass set local.driver=virtualbox
+	 ```
+6. Restart your computer if prompted by Windows.
+
 
 ### Option B: Install Multipass on macOS
 1. Open **Terminal** and run:
