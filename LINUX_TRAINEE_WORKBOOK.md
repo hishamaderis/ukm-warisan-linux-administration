@@ -18,7 +18,7 @@ Before Day 1 starts, ensure you have both Linux distributions installed and runn
 3. Restart your computer if prompted by Windows.
 
 ### Option A2: Install Multipass on Windows 10/11 using virtualbox
-1. Download virtualbox from (here)[https://download.virtualbox.org/virtualbox/7.2.16/VirtualBox-7.2.16-174877-Win.exe]. 
+1. Download virtualbox from [here](https://download.virtualbox.org/virtualbox/7.2.16/VirtualBox-7.2.16-174877-Win.exe). 
 2. Double click on the exe file to install VirtualBox, and follow the installation wizard until the end.
 3. Right-click the **Start Menu** and choose **PowerShell (Admin)** or **Terminal (Admin)**.
 4. Run:
