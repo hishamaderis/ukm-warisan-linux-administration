@@ -510,12 +510,12 @@ Every file and directory in Linux has an owner (**User**), an owning **Group**, 
 
 ```text
                - r w x r - x r - -   1   ubuntu  staff   4096   Sep 7 10:00   deploy.sh
-               ┬ ───┬─ ───┬─ ───┬─       ───┬──  ──┬──
-               │    │      │      │          │     │
-  File Type ───┘    │      │      │          │     └── Group Owner
-  User (Owner) ─────┘      │      │          └──────── User Owner
-  Group Members ───────────┘      │
-  Others (World) ─────────────────┘
+               ┬ ───┬─ ───┬─ ───┬─       ───┬── ──┬──
+               │    │     │     │           │     │
+  File Type ───┘    │     │     │           │     └── Group Owner
+  User (Owner) ─────┘     │     │           └──────── User Owner
+  Group Members ──────────┘     │
+  Others (World) ───────────────┘
 ```
 
 <div class="grid-2">
@@ -1668,8 +1668,69 @@ sudo nvidia-smi -i 0 -mig 0
 </div>
 </div>
 
+---
+
+# 🔄 The 4-Phase MIG Operational Lifecycle (cont.)
+
 > [!TIP]
 > **Hands-On Lab 8 Milestone:** SSH into the remote dedicated GPU node, query telemetry with `nvidia-smi`, enable MIG mode, carve GPU instances, bind a workload, and perform clean teardown.
+
+---
+
+# Using NVIDIA MIG Parted to create MIG partitions
+
+## What is NVIDIA MIG Partition Editor (MIG Parted)
+
+[MIG (short for Multi-Instance GPU)](https://github.com/NVIDIA/mig-parted) is a software that allows NVIDIA GPU to be sliced into mini GPUs with a fixed partition of memory and a fixed partition of compute resources.
+
+## Why MIG Parted?
+1. Less command to run compared to using just nvidia-smi.
+2. The configuration can be saved in git repository for backup and sharing purposes.
+3. Can be easily paired with systemd to reapply the profile after each reboot. 
+
+---
+
+# How to use MIG Parted to create MIG partitions?
+
+1. [Download](https://github.com/NVIDIA/mig-parted/releases) and install nvidia-mig-parted.
+2. List supported MIG profiles for the GPU card
+   ```bash
+   sudo nvidia-smi mig -lgip
+   ```  
+3. Create a configuration file in /home/apps/nvidia-mig-parted/config.yaml. Get a sample from [here](https://github.com/hishamaderis/ukm-warisan-linux-administration/blob/main/config.yaml).
+4. Apply the desired profiles. For example, to activate a profile named all-balanced, use below command
+   ```bash
+   sudo mig-parted -f /home/apps/nvidia-mig-parted/config.yaml -c all-balanced
+   ```
+5. Verify that the MIG profile has been applied
+   ```bash
+   sudo nvidia-smi mig -lgi
+   ```
+
+---
+
+# Automating MIG profiling on reboot
+
+By default, mig-parted would not survive reboot. To reapply MIG parted on each reboot:
+
+1. Create a systemd service: 
+   ```bash
+   sudo systemctl edit --full --force nvidia-mig-parted.service
+   ```
+2. Fill up the file with content from [nvidia-mig-parted.service](https://github.com/hishamaderis/ukm-warisan-linux-administration/blob/main/nvidia-mig-parted.service). 
+3. Save and exit. 
+4. Reload systemd daemon:
+   ```bash
+   sudo systemctl daemon-reload
+   ```
+5. Start the service, and enable it to start on boot:
+   ```bash 
+   sudo systemctl enable --now nvidia-mig-parted
+   ```
+6. Verify that the service is now started, and the MIG profile has been activated:
+   ```bash
+   sudo systemctl status nvidia-mig-parted; sudo nvidia-smi mig -lgi
+   ```
 
 ---
 
