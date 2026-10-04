@@ -1698,11 +1698,11 @@ sudo nvidia-smi -i 0 -mig 0
    sudo nvidia-smi mig -lgip
    ```  
 3. Create a configuration file in /home/apps/nvidia-mig-parted/config.yaml. Get a sample from [here](https://github.com/hishamaderis/ukm-warisan-linux-administration/blob/main/config.yaml).
-4. Apply the desired profiles. For example, to activate a profile named all-balanced, use below command
+4. Apply the desired profiles. For example, to activate a profile named all-balanced, use below command:
    ```bash
    sudo mig-parted -f /home/apps/nvidia-mig-parted/config.yaml -c all-balanced
    ```
-5. Verify that the MIG profile has been applied
+5. Verify that the MIG profile has been applied:
    ```bash
    sudo nvidia-smi mig -lgi
    ```
