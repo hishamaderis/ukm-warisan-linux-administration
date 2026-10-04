@@ -1,0 +1,14 @@
+[Unit]
+Description=NVIDIA MIG Partition Manager
+# Ensure it runs only after the NVIDIA driver is fully loaded and initialized
+After=nvidia-persistenced.service
+Wants=nvidia-persistenced.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+# Specify the path to your config file (-f) and the configuration profile name (-c)
+ExecStart=/usr/bin/nvidia-mig-parted apply -f /home/apps/nvidia-mig-parted/config.yaml -c all-balanced
+
+[Install]
+WantedBy=multi-user.target
